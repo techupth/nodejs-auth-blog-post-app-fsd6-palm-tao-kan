@@ -11,7 +11,7 @@ function RegisterPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // 🐨 Todo: Exercise #2
+    // 🐨 Todo: Exercise #2 finish
     // นำ Function `register` ใน AuthContext มา Execute ใน Event Handler ตรงนี้
     const data = {
       username: username,
