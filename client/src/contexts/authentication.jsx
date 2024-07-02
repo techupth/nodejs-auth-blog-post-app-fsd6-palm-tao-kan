@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import {jwtDecode} from "jwt-decode";
 const AuthContext = React.createContext();
 
 function AuthProvider(props) {
@@ -36,10 +36,11 @@ function AuthProvider(props) {
   };
 
   const logout = () => {
-    // 🐨 Todo: Exercise #7
+    // 🐨 Todo: Exercise #7 finish
     //  ให้เขียน Logic ของ Function `logout` ตรงนี้
     //  Function logout ทำหน้าที่ในการลบ JWT Token ออกจาก Local Storage
-
+    localStorage.removeItem("token");
+    setState({ ...state, user: null });
   };
 
   const isAuthenticated = Boolean(localStorage.getItem("token"));

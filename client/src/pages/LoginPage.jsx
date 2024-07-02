@@ -16,6 +16,7 @@ function LoginPage() {
       password: password
     };
     login(data);
+   
   };
 
   return (
